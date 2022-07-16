@@ -1,6 +1,7 @@
 /** @jsx h */
 import { h } from "preact";
 import A from '../components/A.tsx';
+import { tw } from "@twind";
 
 export default function Menu() {
   function onClick() {
@@ -9,7 +10,7 @@ export default function Menu() {
   }
 
   return (
-    <ul>
+    <ul class={tw`list-none`}>
       <A href='/hello'>Hello</A>
       <A href='/hello/abc'>Hello ABC</A>
 
