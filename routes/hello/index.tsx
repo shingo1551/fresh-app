@@ -3,10 +3,10 @@
 import { Fragment, h } from "preact";
 import { PageProps } from "$fresh/server.ts";
 
-import Head from '../components/Head.tsx';
-import Common from "../components/Common.tsx";
+import Head from '../../components/Head.tsx';
+import Common from "../../components/Common.tsx";
 
-export default function Index(props: PageProps) {
+export default function Hello(props: PageProps) {
   return (
     <>
       <Head>
@@ -14,7 +14,7 @@ export default function Index(props: PageProps) {
         <title>Fresh Starter App</title>
       </Head>
       <Common>
-        <h1>Home</h1>
+        <h1>Hello SPA!</h1>
       </Common>
     </>
   );
