@@ -10,8 +10,10 @@ interface Props {
 }
 
 export default function A(props: Props) {
+  const selected = props.href === location?.pathname ? 'selected' : undefined;
+
   return (
-    <li >
+    <li class={selected}>
       <a href={props.href} disabled={!IS_BROWSER}>{props.children}</a>
     </li>
   );
