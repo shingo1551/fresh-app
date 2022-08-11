@@ -9,7 +9,7 @@ export default function Menu() {
   }
 
   return (
-    <ul>
+    <ul class="menu">
       <A href='/hello'>Hello</A>
       <A href='/hello/abc'>Hello ABC</A>
 
