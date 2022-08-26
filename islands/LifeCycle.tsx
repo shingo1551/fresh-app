@@ -55,7 +55,7 @@ export default class LifeCycle extends Component<P, S> {
     return (
       <div>
         <h1>Lifecycle</h1>
-        <button onClick={() => this.setState({ count: this.state.count + 1 })}>Counter</button>
+        <button onClick={() => this.setState(prev => ({ count: prev.count + 1 }))}>Counter</button>
         <h2>{this.state.count}</h2>
       </div>
     );

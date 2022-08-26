@@ -28,22 +28,22 @@ export default class ToDo extends Component<{}, State> {
     this.state = { count: 1, list: list, disabled: true };
   }
 
-  count = () => this.state.list.reduce((sum, todo) => sum + (todo.done ? 0 : 1), 0);
+  count = (prev: Readonly<State>) => prev.list.reduce((sum, todo) => sum + (todo.done ? 0 : 1), 0);
 
-  changeState = () => this.setState({
+  changeState = () => this.setState(prev => ({
     disabled: !this.input.value,
-    list: this.state.list,
-    count: this.count()
-  });
+    list: prev.list,
+    count: this.count(prev)
+  }));
 
   onPurge = (ev: Event) => {
     ev.preventDefault();
 
-    this.setState({
+    this.setState(prev => ({
       disabled: !this.input.value,
-      list: this.state.list.filter((todo) => !todo.done),
-      count: this.count()
-    });
+      list: prev.list.filter((todo) => !todo.done),
+      count: this.count(prev)
+    }));
   };
 
   onToDo = (n: number) => {
