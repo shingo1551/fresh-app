@@ -9,10 +9,12 @@ import * as $3 from "./routes/draganddrop.tsx";
 import * as $4 from "./routes/hello/[name].tsx";
 import * as $5 from "./routes/hello/index.tsx";
 import * as $6 from "./routes/index.tsx";
+import * as $7 from "./routes/todo.tsx";
 import * as $$0 from "./islands/Charts.tsx";
 import * as $$1 from "./islands/Counter.tsx";
 import * as $$2 from "./islands/DragAndDrop.tsx";
 import * as $$3 from "./islands/Menu.tsx";
+import * as $$4 from "./islands/ToDo.tsx";
 
 const manifest = {
   routes: {
@@ -23,12 +25,14 @@ const manifest = {
     "./routes/hello/[name].tsx": $4,
     "./routes/hello/index.tsx": $5,
     "./routes/index.tsx": $6,
+    "./routes/todo.tsx": $7,
   },
   islands: {
     "./islands/Charts.tsx": $$0,
     "./islands/Counter.tsx": $$1,
     "./islands/DragAndDrop.tsx": $$2,
     "./islands/Menu.tsx": $$3,
+    "./islands/ToDo.tsx": $$4,
   },
   baseUrl: import.meta.url,
 };

@@ -25,7 +25,3 @@ main {
   display: flex;
   padding: 0.625rem;
 }
-
-.charts {
-  width: 800px;
-}
