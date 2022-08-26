@@ -1,5 +1,7 @@
 /** @jsx h */
 import { Component, h } from "preact";
+import { IS_BROWSER } from "$fresh/runtime.ts";
+
 import CheckToDo from '../components/CheckToDo.tsx'
 
 interface ToDo {
@@ -84,7 +86,7 @@ interface PurgeProps {
 const Purge = (props: PurgeProps) => (
   <span>
     {props.count} of {props.list.length} remaining
-    <button onClick={props.onClick}>
+    <button onClick={props.onClick} disabled={!IS_BROWSER}>
       purge
     </button>
   </span>

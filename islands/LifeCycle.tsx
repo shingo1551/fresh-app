@@ -1,5 +1,6 @@
 /** @jsx h */
 import { Component, h } from "preact";
+import { IS_BROWSER } from "$fresh/runtime.ts";
 
 interface P {
   count: number;
@@ -55,7 +56,7 @@ export default class Island extends Component<P, S> {
     return (
       <div>
         <h1>Lifecycle</h1>
-        <button onClick={() => this.setState(prev => ({ count: prev.count + 1 }))}>Counter</button>
+        <button onClick={() => this.setState(prev => ({ count: prev.count + 1 }))} disabled={!IS_BROWSER}>Counter</button>
         <h2>{this.state.count}</h2>
       </div>
     );
