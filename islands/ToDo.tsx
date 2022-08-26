@@ -1,6 +1,6 @@
 /** @jsx h */
-/** @jsxFrag Fragment */
-import { Component, ComponentChildren, Fragment, h } from "preact";
+import { Component, h } from "preact";
+import CheckToDo from '../components/CheckToDo.tsx'
 
 interface IToDo {
   done: boolean;
@@ -107,26 +107,6 @@ const List = (props: ListProps) => (
       />
     ))}
   </ul>
-);
-
-interface CheckProps {
-  done: boolean;
-  text: string;
-  n: number;
-  onClick: (n: number) => void;
-}
-
-const CheckToDo = (props: CheckProps) => (
-  <li>
-    <label class='checkbox'>
-      <input
-        type='checkbox'
-        checked={props.done}
-        onClick={() => props.onClick(props.n)}
-      />
-      <span class={props.done ? 'done' : undefined}>{props.text}</span>
-    </label>
-  </li>
 );
 
 const Form = ({ comp }: { comp: ToDo }) => (
