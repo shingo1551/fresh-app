@@ -3,7 +3,7 @@
 import { Fragment, h } from "preact";
 import SimpleList from "../components/SimpleList.tsx";
 
-export default function DragAndDrop() {
+export default function Island() {
   return (
     <>
       <h1>Drag and Drop</h1>

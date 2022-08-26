@@ -7,7 +7,7 @@ interface CounterProps {
   start: number;
 }
 
-export default function Counter(props: CounterProps) {
+export default function Island(props: CounterProps) {
   const [count, setCount] = useState(props.start);
   return (
     <div>

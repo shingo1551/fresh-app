@@ -6,7 +6,7 @@ import { PageProps } from "$fresh/server.ts";
 import Head from '../../components/Head.tsx';
 import Common from "../../components/Common.tsx";
 
-export default function Hello(props: PageProps) {
+export default function Index(props: PageProps) {
   return (
     <>
       <Head>

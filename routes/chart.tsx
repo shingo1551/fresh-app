@@ -7,7 +7,7 @@ import Head from '../components/Head.tsx';
 import Common from "../components/Common.tsx";
 import C from '../islands/Charts.tsx';
 
-export default function Chart(props: PageProps) {
+export default function Index(props: PageProps) {
   return (
     <>
       <Head>

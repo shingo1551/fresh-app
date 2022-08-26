@@ -2,7 +2,7 @@
 import { h } from "preact";
 import A from '../components/A.tsx';
 
-export default function Menu() {
+export default function Island() {
   function onClick(e: Event) {
     e.preventDefault();
 

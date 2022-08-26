@@ -7,7 +7,7 @@ import Head from '../components/Head.tsx';
 import Common from "../components/Common.tsx";
 import D from "../islands/DragAndDrop.tsx";
 
-export default function DragAndDrop(props: PageProps) {
+export default function Index(props: PageProps) {
   return (
     <>
       <Head>

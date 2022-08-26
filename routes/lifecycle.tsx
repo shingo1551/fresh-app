@@ -7,7 +7,7 @@ import Head from '../components/Head.tsx';
 import Common from '../components/Common.tsx';
 import LC from '../islands/LifeCycle.tsx';
 
-export default function LifeCycle(props: PageProps) {
+export default function Index(props: PageProps) {
   return (
     <>
       <Head>

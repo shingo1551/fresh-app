@@ -5,7 +5,7 @@ import { IS_BROWSER } from "$fresh/runtime.ts";
 // deno-lint-ignore no-var no-explicit-any
 declare var ApexCharts: any;
 
-export default class Charts extends Component {
+export default class Island extends Component {
 
   div: HTMLDivElement | undefined | null;
 

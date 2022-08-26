@@ -7,7 +7,7 @@ import Head from '../components/Head.tsx';
 import Common from '../components/Common.tsx';
 import C from '../islands/Counter.tsx';
 
-export default function Counter(props: PageProps) {
+export default function Index(props: PageProps) {
   return (
     <>
       <Head>

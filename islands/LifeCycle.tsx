@@ -12,7 +12,7 @@ interface S {
 // deno-lint-ignore no-explicit-any
 type Any = any
 
-export default class LifeCycle extends Component<P, S> {
+export default class Island extends Component<P, S> {
 
   constructor(props: P) {
     super(props);

@@ -2,19 +2,19 @@
 import { Component, h } from "preact";
 import CheckToDo from '../components/CheckToDo.tsx'
 
-interface IToDo {
+interface ToDo {
   done: boolean;
   text: string;
 }
 
 interface State {
   count: number;
-  list: IToDo[];
+  list: ToDo[];
   disabled: boolean;
 }
 
 // deno-lint-ignore ban-types
-export default class ToDo extends Component<{}, State> {
+export default class Island extends Component<{}, State> {
   ul: HTMLUListElement | undefined | null;
   input!: HTMLInputElement;
 
@@ -77,7 +77,7 @@ export default class ToDo extends Component<{}, State> {
 
 interface PurgeProps {
   count: number;
-  list: IToDo[];
+  list: ToDo[];
   onClick: (ev: Event) => void;
 }
 
@@ -92,7 +92,7 @@ const Purge = (props: PurgeProps) => (
 
 interface ListProps {
   count: number;
-  list: IToDo[];
+  list: ToDo[];
   onClick: (n: number) => void;
 }
 
@@ -110,7 +110,7 @@ const List = (props: ListProps) => (
   </ul>
 );
 
-const Form = ({ comp }: { comp: ToDo }) => (
+const Form = ({ comp }: { comp: Island }) => (
   <form>
     <input
       type='text'
