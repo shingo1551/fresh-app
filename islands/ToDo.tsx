@@ -100,6 +100,7 @@ const List = (props: ListProps) => (
   <ul>
     {props.list.map((todo, n) => (
       <CheckToDo
+        key={n}
         done={todo.done}
         text={todo.text}
         n={n}
