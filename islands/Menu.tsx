@@ -17,7 +17,7 @@ export default function Menu() {
 
       <A href='/hello/clicked' onClick={onClick}>Click me!</A>
 
-      <A href='/counter'>Counter</A>
+      <A href='/lifecycle'>Life Cycle</A>
       <A href='/todo'>ToDo</A>
 
       <A href='/chart'>Chart</A>

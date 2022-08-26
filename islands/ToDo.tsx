@@ -18,9 +18,8 @@ export default class ToDo extends Component<{}, State> {
   ul: HTMLUListElement | undefined | null;
   input!: HTMLInputElement;
 
-  // deno-lint-ignore ban-types
-  constructor(props: {}) {
-    super(props)
+  constructor() {
+    super();
 
     const list = [
       { text: 'lean TypeScript', done: true },
