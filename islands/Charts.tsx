@@ -1,6 +1,5 @@
 /** @jsx h */
 import { Component, h } from "preact";
-import { IS_BROWSER } from "$fresh/runtime.ts";
 
 // deno-lint-ignore no-var no-explicit-any
 declare var ApexCharts: any;
@@ -13,9 +12,6 @@ export default class Island extends Component {
   chart: any;
 
   chartRender() {
-    if (!IS_BROWSER)
-      return;
-
     const options = {
       chart: {
         type: 'line',
