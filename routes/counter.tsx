@@ -4,8 +4,8 @@ import { Fragment, h } from 'preact';
 import { PageProps } from '$fresh/server.ts';
 
 import Head from '../components/Head.tsx';
-import Common from '../components/Common.tsx';
-import C from '../islands/Counter.tsx';
+import Body from '../components/Body.tsx';
+import Counter from '../islands/Counter.tsx';
 
 export default function Index(props: PageProps) {
   return (
@@ -14,9 +14,9 @@ export default function Index(props: PageProps) {
         <meta name="description" content="Welcome to the Fresh App Starter." />
         <title>Fresh Starter App</title>
       </Head>
-      <Common>
-        <C start={10} />
-      </Common>
+      <Body>
+        <Counter start={10} />
+      </Body>
     </>
   );
 }

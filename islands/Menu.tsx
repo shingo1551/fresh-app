@@ -5,9 +5,7 @@ import A from '../components/A.tsx';
 export default function Island() {
   function onClick(e: Event) {
     e.preventDefault();
-
-    // deno-lint-ignore no-explicit-any
-    (window.location as any) = '/hello/clicked';
+    location.href = '/hello/clicked';
   }
 
   return (

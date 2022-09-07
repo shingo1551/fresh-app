@@ -4,8 +4,8 @@ import { Fragment, h } from "preact";
 import { PageProps } from "$fresh/server.ts";
 
 import Head from '../components/Head.tsx';
-import Common from "../components/Common.tsx";
-import T from "../islands/ToDo.tsx";
+import Body from "../components/Body.tsx";
+import ToDo from "../islands/ToDo.tsx";
 
 export default function Index(props: PageProps) {
   return (
@@ -15,9 +15,9 @@ export default function Index(props: PageProps) {
         <title>Fresh Starter App</title>
         <link href="/todo.css" rel="stylesheet" />
       </Head>
-      <Common>
-        <T />
-      </Common>
+      <Body>
+        <ToDo />
+      </Body>
     </>
   );
 }

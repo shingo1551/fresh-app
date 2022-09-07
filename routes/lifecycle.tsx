@@ -4,8 +4,8 @@ import { Fragment, h } from 'preact';
 import { PageProps } from '$fresh/server.ts';
 
 import Head from '../components/Head.tsx';
-import Common from '../components/Common.tsx';
-import LC from '../islands/LifeCycle.tsx';
+import Body from '../components/Body.tsx';
+import LifeCycle from '../islands/LifeCycle.tsx';
 
 export default function Index(props: PageProps) {
   return (
@@ -14,9 +14,9 @@ export default function Index(props: PageProps) {
         <meta name="description" content="Welcome to the Fresh App Starter." />
         <title>Fresh Starter App</title>
       </Head>
-      <Common>
-        <LC count={10} />
-      </Common>
+      <Body>
+        <LifeCycle count={10} />
+      </Body>
     </>
   );
 }

@@ -4,8 +4,8 @@ import { Fragment, h } from "preact";
 import { PageProps } from "$fresh/server.ts";
 
 import Head from '../components/Head.tsx';
-import Common from "../components/Common.tsx";
-import C from '../islands/Charts.tsx';
+import Body from "../components/Body.tsx";
+import Chart from '../islands/Charts.tsx';
 
 export default function Index(props: PageProps) {
   return (
@@ -16,9 +16,9 @@ export default function Index(props: PageProps) {
         <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
         <link href="/chart.css" rel="stylesheet" />
       </Head>
-      <Common>
-        <C />
-      </Common>
+      <Body>
+        <Chart />
+      </Body>
     </>
   );
 }
