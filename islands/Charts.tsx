@@ -1,5 +1,4 @@
-/** @jsx h */
-import { Component, h } from "preact";
+import { Component } from "preact";
 
 // deno-lint-ignore no-var no-explicit-any
 declare var ApexCharts: any;

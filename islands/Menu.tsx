@@ -1,5 +1,3 @@
-/** @jsx h */
-import { h } from "preact";
 import A from '../components/A.tsx';
 
 export default function Island() {

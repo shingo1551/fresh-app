@@ -1,6 +1,3 @@
-/** @jsx h */
-/** @jsxFrag Fragment */
-import { Fragment, h } from "preact";
 import SimpleList from "../components/SimpleList.tsx";
 
 export default function Island() {

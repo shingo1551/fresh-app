@@ -1,6 +1,4 @@
-/** @jsx h */
-/** @jsxFrag Fragment */
-import { Component, ComponentChildren, Fragment, h } from "preact";
+import { Component, ComponentChildren } from "preact";
 
 // deno-lint-ignore no-var no-explicit-any
 declare var Sortable: any;

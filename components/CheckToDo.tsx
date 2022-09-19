@@ -1,5 +1,4 @@
-/** @jsx h */
-import { Component, h } from "preact";
+import { Component } from "preact";
 
 interface Props {
   done: boolean;
