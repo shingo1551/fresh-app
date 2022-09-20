@@ -1,7 +1,7 @@
 import { Component } from "preact";
 import { IS_BROWSER } from "$fresh/runtime.ts";
 
-import CheckToDo from '../components/CheckToDo.tsx'
+import CheckToDo from "../components/CheckToDo.tsx";
 
 interface ToDo {
   done: boolean;
@@ -23,27 +23,29 @@ export default class Island extends Component<{}, State> {
     super();
 
     const list = [
-      { text: 'lean TypeScript', done: true },
-      { text: 'build Stencil App', done: false },
+      { text: "lean TypeScript", done: true },
+      { text: "build Stencil App", done: false },
     ];
     this.state = { count: 1, list: list, disabled: true };
   }
 
-  count = (prev: Readonly<State>) => prev.list.reduce((sum, todo) => sum + (todo.done ? 0 : 1), 0);
+  count = (prev: Readonly<State>) =>
+    prev.list.reduce((sum, todo) => sum + (todo.done ? 0 : 1), 0);
 
-  changeState = () => this.setState(prev => ({
-    disabled: !this.input.value,
-    list: prev.list,
-    count: this.count(prev)
-  }));
+  changeState = () =>
+    this.setState((prev) => ({
+      disabled: !this.input.value,
+      list: prev.list,
+      count: this.count(prev),
+    }));
 
   onPurge = (ev: Event) => {
     ev.preventDefault();
 
-    this.setState(prev => ({
+    this.setState((prev) => ({
       disabled: !this.input.value,
       list: prev.list.filter((todo) => !todo.done),
-      count: this.count(prev)
+      count: this.count(prev),
     }));
   };
 
@@ -56,7 +58,7 @@ export default class Island extends Component<{}, State> {
     ev.preventDefault();
 
     this.state.list.push({ text: this.input.value, done: false });
-    this.input.value = '';
+    this.input.value = "";
     this.changeState();
   };
 
@@ -68,8 +70,16 @@ export default class Island extends Component<{}, State> {
     return (
       <div class="todo">
         <h2>Todo</h2>
-        <Purge count={this.state.count} list={this.state.list} onClick={this.onPurge} />
-        <List count={this.state.count} list={this.state.list} onClick={this.onToDo} />
+        <Purge
+          count={this.state.count}
+          list={this.state.list}
+          onClick={this.onPurge}
+        />
+        <List
+          count={this.state.count}
+          list={this.state.list}
+          onClick={this.onToDo}
+        />
         <Form comp={this} />
       </div>
     );
@@ -114,9 +124,9 @@ const List = (props: ListProps) => (
 const Form = ({ comp }: { comp: Island }) => (
   <form>
     <input
-      type='text'
+      type="text"
       size={30}
-      placeholder='add new todo here'
+      placeholder="add new todo here"
       ref={(el) => (comp.input = el as HTMLInputElement)}
       onInput={comp.onInput}
     />

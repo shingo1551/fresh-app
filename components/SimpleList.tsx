@@ -23,7 +23,7 @@ export default class SimpleList extends Component<Props> {
     return (
       <>
         <h4>{this.props.titleText}</h4>
-        <ul ref={elm => this.ul = elm}>
+        <ul ref={(elm) => this.ul = elm}>
           {this.props.children}
         </ul>
       </>

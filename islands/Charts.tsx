@@ -4,7 +4,6 @@ import { Component } from "preact";
 declare var ApexCharts: any;
 
 export default class Island extends Component {
-
   div: HTMLDivElement | undefined | null;
 
   // deno-lint-ignore no-explicit-any
@@ -13,11 +12,11 @@ export default class Island extends Component {
   chartRender() {
     const options = {
       chart: {
-        type: 'line',
+        type: "line",
       },
       series: [
         {
-          name: 'sales',
+          name: "sales",
           data: [30, 40, 35, 50, 49, 60, 70, 91, 125],
         },
       ],
@@ -35,6 +34,6 @@ export default class Island extends Component {
   }
 
   render() {
-    return <div class="charts" ref={elm => this.div = elm}></div>;
+    return <div class="charts" ref={(elm) => this.div = elm}></div>;
   }
 }

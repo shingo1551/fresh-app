@@ -1,8 +1,8 @@
-import { PageProps } from '$fresh/server.ts';
+import { PageProps } from "$fresh/server.ts";
 
-import Head from '../components/Head.tsx';
-import Body from '../components/Body.tsx';
-import LifeCycle from '../islands/LifeCycle.tsx';
+import Head from "../components/Head.tsx";
+import Body from "../components/Body.tsx";
+import LifeCycle from "../islands/LifeCycle.tsx";
 
 export default function Index(props: PageProps) {
   return (
