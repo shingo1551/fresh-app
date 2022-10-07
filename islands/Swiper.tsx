@@ -16,14 +16,15 @@ export default class Island extends Component {
         left: (this.future + 1) * w,
         behavior: "smooth",
       });
-      if (10 < this.future) {
-        const n = this.future - 5;
+
+      if (5 < this.future && this.future < 11) {
+        this.future = this.future + 1;
+      } else {
+        const n = 10 < this.future ? this.future - 5 : this.future + 7;
         setTimeout(() => {
           this.div.current!.scrollLeft = w * n;
         }, 1000);
         this.future = n;
-      } else {
-        this.future = this.future + 1;
       }
     }, 5000);
     console.log("startScrool", this.t);
