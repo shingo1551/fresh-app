@@ -10,14 +10,13 @@ export default function Island() {
     <ul class="menu">
       <A href="/hello">Hello</A>
       <A href="/hello/abc">Hello ABC</A>
-
       <A href="/hello/clicked" onClick={onClick}>Click me!</A>
 
       <A href="/lifecycle">Life Cycle</A>
       <A href="/todo">ToDo</A>
+      <A href="/swiper">Swiper</A>
 
       <A href="/chart">Chart</A>
-
       <A href="/draganddrop">Drag and Drop</A>
     </ul>
   );
