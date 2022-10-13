@@ -18,7 +18,7 @@ export default function Animation() {
   return (
     <div>
       <button onClick={onClick}>{open ? "X" : "O"}</button>
-      <div class="contents">Contents</div>
+      <div class={`contents ${visible ? "fixed" : ""}`}>Contents</div>
       {visible
         ? <div class={`menu ${open ? "open" : "close"}`}>Menu</div>
         : null}
