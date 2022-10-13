@@ -17,19 +17,23 @@
 
 @keyframes menu-open {
   from {
-    transform: translateX(-20rem);
+    opacity: 0;
+    /* transform: translateX(-20rem); */
   }
   to {
-    transform: translateX(0);
+    opacity: 1;
+    /* transform: translateX(0); */
   }
 }
 
 @keyframes menu-close {
   from {
-    transform: translateX(0);
+    opacity: 1;
+    /* transform: translateX(0); */
   }
   to {
-    transform: translateX(-20rem);
+    opacity: 0;
+    /* transform: translateX(-20rem); */
   }
 }
 
