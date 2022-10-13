@@ -17,10 +17,10 @@ export default function Animation() {
 
   return (
     <div>
-      <button onClick={onClick}>{open ? "X" : "O"}</button>
-      <div class={`contents ${visible ? "fixed" : ""}`}>Contents</div>
+      {/* <button onClick={onClick}>{open ? "X" : "O"}</button> */}
+      <div onClick={onClick} class={`contents ${visible ? "fixed" : ""}`}>Contents</div>
       {visible
-        ? <div class={`menu ${open ? "open" : "close"}`}>Menu</div>
+        ? <div onClick={onClick} class={`menu ${open ? "open" : "close"}`}>Menu</div>
         : null}
     </div>
   );
