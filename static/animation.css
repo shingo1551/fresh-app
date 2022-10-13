@@ -8,11 +8,13 @@
 }
 
 .open {
-  animation: 0.4s linear 0s alternate menu-open;
+  /* animation: 0.4s linear 0s alternate menu-open; */
+  animation: 0.4s ease-in-out menu-open;
 }
 
 .close {
-  animation: 0.4s linear 0s alternate menu-close;
+  /* animation: 0.4s linear 0s alternate menu-close; */
+  animation: 0.4s ease-in-out menu-close;
 }
 
 @keyframes menu-open {
