@@ -5,28 +5,37 @@ const colors = ["red", "green", "blue", "yellow", "pink", "black"];
 const colors2 = [...colors, ...colors, ...colors];
 const w = 500;
 
-export default class Island extends Component {
+interface State {
+  feature: number;
+}
+
+// deno-lint-ignore ban-types
+export default class Island extends Component<{}, State> {
   t = 0;
-  future = 6;
   div = createRef();
+
+  constructor() {
+    super();
+    this.setState({ feature: 6 })
+  }
 
   startScrool = () => {
     this.t = setInterval(() => {
       this.div.current?.scroll({
-        left: (this.future + 1) * w,
+        left: (this.state.feature + 1) * w,
         behavior: "smooth",
       });
 
-      if (5 < this.future && this.future < 11) {
-        this.future = this.future + 1;
+      if (5 < this.state.feature && this.state.feature < 11) {
+        this.setState({ feature: this.state.feature + 1 });
       } else {
-        const n = 10 < this.future ? this.future - 5 : this.future + 7;
+        const n = 10 < this.state.feature ? this.state.feature - 5 : this.state.feature + 7;
         setTimeout(() => {
           this.div.current!.scrollLeft = w * n;
         }, 1000);
-        this.future = n;
+        this.setState({ feature: n });
       }
-    }, 5000);
+    }, 3000);
     console.log("startScrool", this.t);
   };
 
@@ -58,28 +67,31 @@ export default class Island extends Component {
     const n = Math.ceil(this.div.current!.scrollLeft / w);
     console.log(this.div.current!.scrollLeft, n, colors2[n]);
     this.div.current?.scroll({ left: n * w, behavior: "smooth" });
-    this.future = n;
+    this.setState({ feature: n });
   };
 
   render() {
     return (
-      <div
-        style="width: 500px; overflow-x: auto;"
-        ref={this.div}
-        onPointerEnter={this.onPointerEnter}
-        onPointerLeave={this.onPointerLeave}
-        onScroll={debounce(this.onScroll, 500)}
-      >
-        <div style="display: flex; flex-direction: row; width: 9000px">
-          {colors2.map((color) => (
-            <div
-              style={`width:${w}px; height:100px; color:gray; background-color:${color};`}
-            >
-              {color}
-            </div>
-          ))}
+      <>
+        <div
+          style="width: 500px; overflow-x: auto;"
+          ref={this.div}
+          onPointerEnter={this.onPointerEnter}
+          onPointerLeave={this.onPointerLeave}
+          onScroll={debounce(this.onScroll, 500)}
+        >
+          <div style="display: flex; flex-direction: row; width: 9000px">
+            {colors2.map((color) => (
+              <div
+                style={`width:${w}px; height:100px; color:gray; background-color:${color};`}
+              >
+                {color}
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
+        <p>{this.state.feature}</p>
+      </>
     );
   }
 }
