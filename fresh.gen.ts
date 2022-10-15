@@ -13,7 +13,8 @@ import * as $6 from "./routes/hello/index.tsx";
 import * as $7 from "./routes/index.tsx";
 import * as $8 from "./routes/lifecycle.tsx";
 import * as $9 from "./routes/swiper.tsx";
-import * as $10 from "./routes/todo.tsx";
+import * as $10 from "./routes/swiperjs.tsx";
+import * as $11 from "./routes/todo.tsx";
 import * as $$0 from "./islands/Animation.tsx";
 import * as $$1 from "./islands/Charts.tsx";
 import * as $$2 from "./islands/Counter.tsx";
@@ -21,7 +22,8 @@ import * as $$3 from "./islands/DragAndDrop.tsx";
 import * as $$4 from "./islands/LifeCycle.tsx";
 import * as $$5 from "./islands/Menu.tsx";
 import * as $$6 from "./islands/Swiper.tsx";
-import * as $$7 from "./islands/ToDo.tsx";
+import * as $$7 from "./islands/SwiperJS.tsx";
+import * as $$8 from "./islands/ToDo.tsx";
 
 const manifest = {
   routes: {
@@ -35,7 +37,8 @@ const manifest = {
     "./routes/index.tsx": $7,
     "./routes/lifecycle.tsx": $8,
     "./routes/swiper.tsx": $9,
-    "./routes/todo.tsx": $10,
+    "./routes/swiperjs.tsx": $10,
+    "./routes/todo.tsx": $11,
   },
   islands: {
     "./islands/Animation.tsx": $$0,
@@ -45,7 +48,8 @@ const manifest = {
     "./islands/LifeCycle.tsx": $$4,
     "./islands/Menu.tsx": $$5,
     "./islands/Swiper.tsx": $$6,
-    "./islands/ToDo.tsx": $$7,
+    "./islands/SwiperJS.tsx": $$7,
+    "./islands/ToDo.tsx": $$8,
   },
   baseUrl: import.meta.url,
   config,

@@ -1,3 +1,4 @@
+import { IS_BROWSER } from "$fresh/runtime.ts";
 import { Component, createRef } from "preact";
 import { debounce } from "https://deno.land/std@0.159.0/async/mod.ts";
 
@@ -71,6 +72,8 @@ export default class Island extends Component<{}, State> {
   };
 
   render() {
+    if (IS_BROWSER)
+      console.log(window.screen.width);
     return (
       <>
         <div
