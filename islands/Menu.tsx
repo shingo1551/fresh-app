@@ -15,8 +15,7 @@ export default function Island() {
       <A href="/lifecycle">Life Cycle</A>
       <A href="/todo">ToDo</A>
       <A href="/swiper">Swiper</A>
-      <A href="/swiperjs">SwiperJS</A>
-      <A href="/animation">Animation</A>
+      <A href="/wasm">Wasm</A>
 
       <A href="/chart">Chart</A>
       <A href="/draganddrop">Drag and Drop</A>
