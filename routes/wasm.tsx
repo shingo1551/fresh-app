@@ -7,14 +7,21 @@ interface Props {
   text: string;
 }
 
+interface Wasm {
+  add: (a: number, b: number) => number;
+  sub: (a: number, b: number) => number;
+  memory: unknown;
+}
+
 export const handler: Handlers<Props> = {
   async GET(req, ctx) {
-    const wasmCode = await Deno.readFile("static/add.wasm");
+    const wasmCode = await Deno.readFile("static/release.wasm");
     const wasmModule = new WebAssembly.Module(wasmCode);
     const wasmInstance = new WebAssembly.Instance(wasmModule);
-    const add = wasmInstance.exports.add as CallableFunction
+    // const add = wasmInstance.exports.add as CallableFunction
+    const wasm = wasmInstance.exports as unknown as Wasm;
 
-    return ctx.render({ text: "add(1, 2): " + add(1, 2) });
+    return ctx.render({ text: "sub(1, 2): " + wasm.sub(1, 2) });
   },
 };
 
